@@ -7,7 +7,7 @@ class AppTheme with ChangeNotifier {
 
   void toggleTheme() {
     _isDarkMode = !_isDarkMode;
-    setColors();
+    _setColors();
     notifyListeners();
   }
 
@@ -17,7 +17,7 @@ class AppTheme with ChangeNotifier {
   Color _backgroundColor;
   Color get backgroundColor => _backgroundColor;
 
-  void setColors(){
+  void _setColors(){
     _textColor = _isDarkMode ? Colors.white : Colors.black;
     _backgroundColor = _isDarkMode ? Colors.black : Colors.white;
   }
